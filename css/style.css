@@ -1,0 +1,332 @@
+/* importação da fonte*/
+@import url(//fonts.googleapis.com/css?family=Noto+Sans);
+
+/* atributos do body */
+body{
+    font-family: 'Noto Sans';
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header{
+    /* background-image: url(../img/dino.jpg); */
+    background-color: #263d36;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 1.2;
+    max-width: none;
+    text-align: center;
+    padding-bottom: 5em;
+}
+
+header h1 {
+    color: white;
+    font-size: 2.5em;
+    font-weight: 300;
+}
+
+#logo {
+    display: inline-block;
+    height: 120px;
+    vertical-align: top;
+    width: 120px;
+}
+
+/* Seções */
+
+section:nth-of-type( 2n) {
+    background-color: #f5f6fa;
+}
+
+/* Footer */
+
+footer {
+    background-color: #1d99f3;
+    overflow: hidden;
+    padding: 3em ;
+}
+
+footer p{
+    font-size: 0.8em;
+    color:white;
+}
+
+/*paragráfo, permite a quebra de palavras com hífens*/
+p{
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
+/* Botões e icones */
+.button {
+    border: 1px solid #1d99f3;
+    border-radius: 30px;
+    color: black;
+    font-size: 0.8em;
+    padding: 0.3em 1em;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: 0 10vw;
+}
+
+.button:hover {
+    background: #1d99f3;
+    color: white;
+}
+
+
+.icon{
+    text-decoration: none;
+    color:white;
+}
+
+/* Menu de navegação*/
+.navbar {
+    list-style-type: none;
+    margin-bottom: 3em ;
+    padding: 0 ;
+    overflow: hidden;
+    background-color: transparent;
+}
+
+.navbar-collapse {
+    list-style-type: none;
+    margin-bottom: 3em;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+    display: none;
+}
+
+.navbar-header-collapse {
+    height: 3em;
+    border: 1px solid white;
+}
+
+.navbar-item {
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 1em ;
+    float: right;
+    text-decoration: none;
+}
+
+.navbar-item-collapse {
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 1em;
+    float:none;
+    border: 1px solid white;
+    text-decoration: none;
+}
+
+.navbar-icon{
+    color: white;
+    text-align: center;
+    padding: 1em;
+    float: right;
+    display: block;
+}
+
+.navbar-title{
+    color: white;
+    text-align: center;
+    padding: 1em;
+    float:left;
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+/* Esconde o menu quando a tela ficar pequena, quando o ecrã tiver menos de 600 px
+Exibe o menu mobile*/
+@media screen and (max-width: 600px) {
+    .navbar {
+        display: none;
+    }
+    .navbar-collapse {
+        display: block;
+    }
+}
+
+/* imagens */
+.img-responsive {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-avatar{
+    border-radius: 500rem;
+}
+
+/* Container e Derivados*/
+
+/*
+reset básico
+retira a margin e o padding dos elementos (para o navegador não colocar)
+e aciona o box-sizing (tamanho do elemento muda ao
+adicionar margin ou padding)
+*/
+
+.container, .row, .col, .col2, .col3 {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  /* webkit e moz são os motores de navegação do mozilla e chrome*/
+}
+
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2em ;
+}
+
+.row {
+    padding: 1em 1em ;
+    overflow: hidden;
+    clear:both;
+}
+
+/* row clearfix */
+/* .row:before,
+.row:after{
+    content: "";
+    clear: both;
+    display: table;
+} */
+
+/* base para todas as colunas, por padrão assume 1 coluna*/
+.col {
+    display: inline-block;
+    vertical-align: top;
+    /*retira a margin que o inline-block coloca*/
+    margin-right: -4px;
+    min-height: 1em;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.col img{
+    max-width: 100%;
+    max-height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col p {
+    word-wrap: normal;
+    text-indent: 1.5em;
+    padding: 0 1em;
+}
+
+.container h2 {
+    text-align: center;
+}
+
+.col-2 h2,
+.col-3 h2,
+.col-2 p,
+.col-3 p {
+    text-align: center;
+}
+
+
+/*duas colunas*/
+@media (min-width: 480px) {
+  /* se o tamanho da tela não tiver no mínimo 480px a classe é ignorada 1 columa é aplicada*/
+    .col-2 {
+        width: 50%;
+    }
+}
+
+/* tres colunas */
+@media (min-width: 728px) {
+  /* se o tamanho da tela não tiver no mínimo 728px a classe é ignorada e 1 columa é aplicada*/
+    .col-3 {
+        width: 33.3333%;
+    }
+
+    .content {
+        width: 70%;
+    }
+
+    .side {
+        width: 30%;
+    }
+}
+
+/* Linha do Tempo */
+
+.timeline {
+    position: relative;
+    max-width: 1024px;
+    height: auto;
+    padding: 0px;
+    margin: 0px auto;
+    overflow: hidden;
+    list-style: none;
+}
+
+.timeline-background {
+    width: 50%;
+    float: left;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    border-right: 2px dashed grey;
+    box-sizing: border-box;
+}
+
+.timeline-year {
+    font-weight: 600;
+    font-size: 25px;
+    letter-spacing: 3px;
+    color: #f0f0f0;
+    background-color: #1d99f3;
+    text-align: center;
+    margin-top: 3em;
+    margin: 1em auto;
+    clear: both;
+}
+
+.timeline-event{
+    width: 44%;
+    margin: 4% 2%;
+    padding: 1%;
+    float: right;
+    text-align: center;
+    background-color: white;
+}
+
+.timeline-img{
+    width: 44%;
+    margin: 4% 2%;
+    padding: 1%;
+    float: left;
+    background-color: white;
+}
+
+@media (max-width: 600px) {
+    .timeline-event,
+    .timeline-img {
+        width:auto;
+        float:none;
+    }
+}
