@@ -5,39 +5,92 @@
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+        <link rel="icon" href="img/favicon.png" type="image/x-icon" />
     </head>
     <body>
-
-        <header>
+        <header class="bg-2018">
             <nav>
-                <div id="nav" class="navbar">
-                    <a class="navbar-title">Latin America KDE Summit </a>
-                    <a class="navbar-item" href="">Contato</a>
-                    <a class="navbar-item" href="">Versões</a>
-                    <a class="navbar-item" href="">Sobre</a>
+                <div class="navbar">
+                    <a class="navbar-title" href="index.html">Latin America KDE Summit </a>
+                    <a class="navbar-item"  href="contato.html">Contato</a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-dropdown-title">
+                            Edições
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                        <div class="navbar-dropdown-content">
+                            <a class="navbar-dropdown-item" href="2017.html">2017</a>
+                            <a class="navbar-dropdown-item" href="2016.html">2016</a>
+                            <a class="navbar-dropdown-item" href="2015.html">2015</a>
+                            <a class="navbar-dropdown-item" href="2014.html">2014</a>
+                            <a class="navbar-dropdown-item" href="2012.html">2012</a>
+                        </div>
+                    </div>
+                    <a class="navbar-item" href="sobre.html">Sobre</a>
                 </div>
-                <div id="navmobile" class="navbar-collapse">
+                <div class="navbar-collapse">
                     <div class="navbar-header-collapse">
-                    <a class="navbar-title">Latin America KDE Summit </a>
-                    <a class="navbar-icon" onclick="menuShow()">
+                    <a class="navbar-title">Latin America KDE Summit</a>
+                    <a class="navbar-icon" onclick="javascript:menuShow();">
                         <i class="fas fa-bars"></i>
                     </a>
                     </div>
-                    <a class="navbar-item-collapse hide" href="">Home</a>
-                    <a class="navbar-item-collapse hide" href="">Sobre</a>
-                    <a class="navbar-item-collapse hide" href="">Versões</a>
-                    <a class="navbar-item-collapse hide" href="">Contato</a>
+                    <a class="navbar-item-collapse hide" href="sobre.html">Sobre</a>
+                    <a class="navbar-item-collapse hide" href="javascript:dropdownShow();">Edições
+                        <i class="fa fa-caret-down"></i>
+                    </a>
+                    <a class="navbar-collapse-dropdown-item hide" href="2017.html">2017</a>
+                    <a class="navbar-collapse-dropdown-item hide" href="2016.html">2016</a>
+                    <a class="navbar-collapse-dropdown-item hide" href="2015.html">2015</a>
+                    <a class="navbar-collapse-dropdown-item hide" href="2014.html">2014</a>
+                    <a class="navbar-collapse-dropdown-item hide" href="2012.html">2012</a>
+                    <a class="navbar-item-collapse hide" href="contato.html">Contato</a>
                 </div>
             </nav>
-            <img id="logo" src="img/logo.png" alt="logo">
+            <img id="logo" src="img/kde-logo.png" alt="logo">
             <h1> Latin America KDE Summit | Lakademy 2018 </h1>
-            <a class="icon" onclick="scroll()">
-                <i class="fas fa-chevron-down fa-3x"></i>
-            </a>
+            <div class="button">
+                <a class="button-primary"> Inscreva-se! </a>
+            </div>
         </header>
 
         <main>
-            <section>
+            <section id="sobre">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-3">
+                            <h2> Sobre </h2>
+                            <img src="img/sobre.png">
+                            <p>
+                                O LaKademy é o encontro dos usuários e colaboradores latino-americanos da comunidade KDE.
+                            </p>
+                            <div class="button">
+                                <a class="button button-secondary"> Saiba mais!</a>
+                            </div>
+                        </div>
+                        <div class="col col-3">
+                            <h2> Colabore </h2>
+                            <img src="img/contribua.png">
+                            <p>
+                                Se você deseja se tornar um(a) contribuidor(a) da nossa comunidade há muitas atividades com as quais você pode se envolver.
+                            </p>
+                            <div class="button">
+                                <a class="button-secondary"> Saiba mais!</a>
+                            </div>
+                        </div>
+                        <div class="col col-3">
+                            <h2> Contate-nos </h2>
+                            <img src="img/contato.png">
+                            <p>Se você tem interesse em participar do LaKademy e contribuir com a comunidade KDE, entre em contato conosco.</p>
+                            <div class="button">
+                                <a class="button-secondary"> Saiba mais!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="edicoes">
                 <ul class="timeline">
                     <div class="timeline-background"></div>
                     <li class="timeline-year">
@@ -117,75 +170,58 @@
                 </ul>
             </section>
 
-            <section id="sobre" class="container">
-                <div class="row">
-                    <div class="col col-3">
-                        <h2> Sobre </h2>
-                        <img src="img/sobre.png">
-                        <p>
-                            O LaKademy é o encontro dos usuários e colaboradores latino-americanos da comunidade KDE.
-                        </p>
-                        <a class="button"> Saiba mais!</a>
-                    </div>
 
-                    <div class="col col-3">
-                        <h2> Colabore </h2>
-                        <img  src="img/contribua.png">
-                        <p>
-                            Se você deseja se tornar um(a) contribuidor(a) da nossa comunidade há muitas atividades com as quais você pode se envolver.
-                        </p>
-                        <a class="button"> Saiba mais!</a>
-                    </div>
 
-                    <div class="col col-3">
-                        <h2> Contate-nos </h2>
-                        <img src="img/contato.png">
-                        <p>Se você tem interesse em participar do LaKademy e contribuir com a comunidade KDE, entre em contato conosco.</p>
-                        <a class="button"> Saiba mais!</a>
-                    </div>
-
-                </div>
-            </section>
-
-            <section class="container">
-                <h2> Depoimentos </h2>
-                <div class="row">
-                    <div class="col col-3">
-                        <img src="img/avatar1.png" class="img-avatar">
-                        <p>
-                            O LaKademy é o encontro dos usuários e colaboradores latino-americanos da comunidade KDE.
-                        </p>
-                    </div>
-                    <div class="col col-3">
-                        <img src="img/avatar2.png" class="img-avatar">
-                        <p>
-                            O LaKademy é o encontro dos usuários e colaboradores latino-americanos da comunidade KDE.
-                        </p>
-                    </div>
-                    <div class="col col-3">
-                        <img src="img/avatar3.png" class="img-avatar">
-                        <p>
-                            O LaKademy é o encontro dos usuários e colaboradores latino-americanos da comunidade KDE.
-                        </p>
+            <section id="depoimentos">
+                <div class="container">
+                    <h2> Depoimentos </h2>
+                    <div class="row">
+                        <div class="col col-3">
+                            <img src="img/avatar1.png" class="img-responsive img-avatar">
+                            <p>
+                                O LaKademy é o encontro dos usuários e colaboradores latino-americanos da comunidade KDE.
+                            </p>
+                        </div>
+                        <div class="col col-3">
+                            <img src="img/avatar2.png" class="img-responsive img-avatar">
+                            <p>
+                                O LaKademy é o encontro dos usuários e colaboradores latino-americanos da comunidade KDE.
+                            </p>
+                        </div>
+                        <div class="col col-3">
+                            <img src="img/avatar3.png" class="img-responsive img-avatar">
+                            <p>
+                                O LaKademy é o encontro dos usuários e colaboradores latino-americanos da comunidade KDE.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </section>
-
         </main>
 
         <footer>
-            <div class="">
-                <p>
-                    Mantido por KDE Brasil
-                </p>
-                <p>
-                    KDE® e logo do KDE são marcas registradas de KDE e.V.
-                </p>
-            </div>
-            <div class="">
-                <i class="icon social-media fab fa-facebook"></i>
-                <i class="icon social-media fab fa-twitter"></i>
-                <i class="icon social-media fab fa-instagram"></i>
+            <div class="container">
+                <div class="row">
+                    <div class="col col-content">
+                        <p>
+                            Mantido por KDE Brasil
+                        </p>
+                        <p>
+                            KDE® e logo do KDE são marcas registradas de KDE e.V.
+                        </p>
+                    </div>
+                    <div class="col col-sidebar">
+                        <p>
+                            <i class="icon social-media fab fa-facebook"></i>/lakademy
+                        </p>
+                        <p>
+                            <i class="icon social-media fab fa-twitter"></i>/lakademy
+                        </p>
+                        <p>
+                            <i class="icon social-media fab fa-telegram"></i>/lakademy
+                        </p>
+                    </div>
+                </div>
             </div>
         </footer>
 
