@@ -1,52 +1,56 @@
-/* importação da fonte*/
+/* importação da fonte padrão da KDE*/
 @import url(//fonts.googleapis.com/css?family=Noto+Sans);
 
 /* atributos do body */
 body{
     font-family: 'Noto Sans';
-    line-height: 1.5;
     margin: 0;
     padding: 0;
 }
 
 /* Header */
 header{
-    /* background-image: url(../img/dino.jpg); */
-    background-color: #263d36;
+    background-color: #1d99f3;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    line-height: 1.2;
     max-width: none;
     text-align: center;
     padding-bottom: 5em;
+}
+
+/* cada ano/pagina tem seu background image especifico definida por uma classe*/
+.bg-2018{
+    background-image: url(../img/floripa.jpg);
+}
+
+.bg-2017{
+    background-image: url(../img/bh2.jpg);
 }
 
 header h1 {
     color: white;
     font-size: 2.5em;
     font-weight: 300;
+    line-height: 1.2;
+    text-shadow: 2px 2px #000000;
 }
 
 #logo {
-    display: inline-block;
-    height: 120px;
+    max-height: 125px;
     vertical-align: top;
-    width: 120px;
+    width: auto;
 }
 
 /* Seções */
 
-section:nth-of-type( 2n) {
+section:nth-of-type( odd ) {
     background-color: #f5f6fa;
 }
 
 /* Footer */
-
 footer {
     background-color: #1d99f3;
-    overflow: hidden;
-    padding: 3em ;
 }
 
 footer p{
@@ -54,61 +58,60 @@ footer p{
     color:white;
 }
 
-/*paragráfo, permite a quebra de palavras com hífens*/
-p{
-    -webkit-hyphens: auto;
-    -moz-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
+/* Botões e icones */
+/* aplicada na div antes do elemento a para centralizar e aplicar a margem ao botão */
+.button {
+    text-align: center;
+    margin: 1em 0 1em 0 ;
 }
 
-/* Botões e icones */
-.button {
+/* classe aplicada sobre o elemento a para criar um botão primario */
+.button-primary{
+    border: none;
+    border-radius: 2px;
+    text-transform: uppercase;
+    color: white;
+    background: #1d99f3;
+    padding: 0.3em 1em;
+    text-decoration: none;
+}
+
+/* classe aplicada sobre o elemento a para criar um botão secundario */
+.button-secondary{
     border: 1px solid #1d99f3;
     border-radius: 30px;
     color: black;
     font-size: 0.8em;
     padding: 0.3em 1em;
-    text-align: center;
     text-decoration: none;
-    display: block;
-    margin: 0 10vw;
 }
 
-.button:hover {
+.button-secondary:hover {
     background: #1d99f3;
     color: white;
 }
 
-
-.icon{
+.icon {
     text-decoration: none;
-    color:white;
+    color: white;
+    font-size: 1.5em;
 }
 
 /* Menu de navegação*/
+
+/* Duas barras são necessárias, uma para Desktop e outra para Mobile */
+
+/* Desktop */
+
+/* bloco da barra de navegação*/
 .navbar {
-    list-style-type: none;
     margin-bottom: 3em ;
-    padding: 0 ;
+    padding: 0 1em ;
     overflow: hidden;
     background-color: transparent;
 }
 
-.navbar-collapse {
-    list-style-type: none;
-    margin-bottom: 3em;
-    padding: 0;
-    overflow: hidden;
-    background-color: transparent;
-    display: none;
-}
-
-.navbar-header-collapse {
-    height: 3em;
-    border: 1px solid white;
-}
-
+/* item da barra de navegação - sempre a direita */
 .navbar-item {
     color: white;
     display: block;
@@ -116,8 +119,94 @@ p{
     padding: 1em ;
     float: right;
     text-decoration: none;
+    text-shadow: 2px 2px #000000;
 }
 
+/* item da barra de navegação - sempre a esquerda*/
+.navbar-title {
+    color: white;
+    text-align: center;
+    padding: 1em;
+    float: left;
+    display: block;
+    text-shadow: 2px 2px #000000;
+    text-decoration: none;
+}
+
+/* bloco do dropdown*/
+.navbar-dropdown {
+    display: block;
+    float: right;
+    overflow: hidden;
+    padding: 1em;
+}
+
+/* título do dropdown */
+.navbar-dropdown-title {
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 2px 2px #000000;
+}
+
+/* bloco de conteúdo do dropdown
+possui posição absoluta
+z-index:1 para não empurrar os outros elementos
+Está oculto em primeiro momento e é exibido após hover do dropdown*/
+.navbar-dropdown-content {
+    z-index: 1;
+    display: none;
+    position: absolute;
+}
+
+/* itens do dropdown */
+.navbar-dropdown-item {
+    color: white;
+    text-decoration: none;
+    display: block;
+    background-color: transparent;
+    padding: 1em;
+    text-shadow: 2px 2px #000000;
+}
+
+/* todo conteudo de um dropdown em hover será exibido */
+.navbar-dropdown:hover .navbar-dropdown-content {
+    display: block;
+}
+
+/* Mobile */
+
+/* bloco da barra - nasce oculta e é exibida via MediaQuery */
+.navbar-collapse {
+    list-style-type: none;
+    margin-bottom: 3em;
+    padding: 0 ;
+    overflow: hidden;
+    background-color: transparent;
+    display: none;
+    border: 1px solid white;
+}
+
+/* agrupador do título (.navbar-tilte) e do botão (.navbar-icon)
+tem essa altura para impedir que os items do menu subão ao serem exibidos */
+.navbar-header-collapse {
+    height: 3em;
+}
+
+/* icone da barra mobile - sempre a direita */
+.navbar-icon {
+    color: white;
+    text-align: center;
+    padding: 1em;
+    float: right;
+    display: block;
+    text-shadow: 2px 2px #000000;
+}
+
+/* item da barra
+Semelhantes ao da barra desktop, mas são centralizados, dispostos em blocos e com bordas
+Iniciam ocultos com a adição da classe .hide que é removida e adicionada utilizando JS (menuShow())
+A função é chamada através do .navbar-icon*/
 .navbar-item-collapse {
     color: white;
     display: block;
@@ -126,30 +215,30 @@ p{
     float:none;
     border: 1px solid white;
     text-decoration: none;
+    text-shadow: 2px 2px #000000;
 }
 
-.navbar-icon{
+/* O dropdown mobile é mais simples
+A formatação dos seus sub-items é semelhante a um navbar-item-collapse
+Também iniciam ocultos com a classe .hide que é removida e adicionada utilizando JS (dropdownShow())
+Basta definir um navbar-item-collapse que chamará a função */
+
+.navbar-collapse-dropdown-item {
     color: white;
+    display: block;
     text-align: center;
     padding: 1em;
-    float: right;
-    display: block;
+    float: none;
+    border: 1px solid white;
+    text-decoration: none;
+    text-shadow: 2px 2px #000000;
 }
 
-.navbar-title{
-    color: white;
-    text-align: center;
-    padding: 1em;
-    float:left;
-    display: block;
-}
-
-.hide{
+.hide {
     display: none;
 }
 
-/* Esconde o menu quando a tela ficar pequena, quando o ecrã tiver menos de 600 px
-Exibe o menu mobile*/
+/* Esconde o menu desktop e exibe o menu mobile */
 @media screen and (max-width: 600px) {
     .navbar {
         display: none;
@@ -159,26 +248,30 @@ Exibe o menu mobile*/
     }
 }
 
-/* imagens */
+/* Imagens */
+
+/* Imagem responsiva
+Disposta em bloco com margens automáticas para centralizar
+Largura máxima de 70% e altura proporcional */
 .img-responsive {
-    max-width: 80%;
+    max-width: 70%;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
+/* Imagem em circulo */
 .img-avatar{
     border-radius: 500rem;
 }
 
-/* Container e Derivados*/
+/*Sistema de Colunas - Grid*/
 
 /*
-reset básico
-retira a margin e o padding dos elementos (para o navegador não colocar)
-e aciona o box-sizing (tamanho do elemento muda ao
-adicionar margin ou padding)
+Reset Básico
+Retira a margin e o padding dos elementos (para o navegador não colocar automaticamente)
+e aciona o box-sizing (tamanho do elemento muda ao adicionar margin ou padding)
 */
 
 .container, .row, .col, .col2, .col3 {
@@ -190,6 +283,8 @@ adicionar margin ou padding)
   /* webkit e moz são os motores de navegação do mozilla e chrome*/
 }
 
+/* container possui uma row (linha) que possui n colunas */
+
 .container {
     width: 100%;
     margin-left: auto;
@@ -197,60 +292,60 @@ adicionar margin ou padding)
     padding: 2em ;
 }
 
+.container h2 {
+    text-align: center;
+}
+
+/* se a tela tiver no mínimo 1170px, sua largura máxima se torna 1170px e seu padding lateral é removido
+pois não é mais necessário */
+@media (min-width: 1170px) {
+    .container {
+        max-width: 1170px;
+        padding: 2em 0 2em 0;
+    }
+}
+
+/* o atributo clear:both impede que elementos flutuem em torno da row */
 .row {
     padding: 1em 1em ;
     overflow: hidden;
     clear:both;
 }
 
-/* row clearfix */
-/* .row:before,
-.row:after{
-    content: "";
-    clear: both;
-    display: table;
-} */
 
-/* base para todas as colunas, por padrão assume 1 coluna*/
+/* base para todas as colunas, por padrão assume 1 coluna ou seja 100% de largura
+As colunas sempre são utilizadas com col + col-n (número de colunas que deseja)
+São dispostas como blocos em uma linhas (display:inline-block)*/
 .col {
     display: inline-block;
     vertical-align: top;
-    /*retira a margin que o inline-block coloca*/
-    margin-right: -4px;
     min-height: 1em;
     width: 100%;
     margin-bottom: 2em;
+     /*retira a margin que o inline-block coloca*/
+    margin-right: -4px;
 }
 
-.col img{
-    max-width: 100%;
-    max-height: 200px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
+/* especificação do elemento p dentro de uma coluna */
 .col p {
     word-wrap: normal;
     text-indent: 1.5em;
     padding: 0 1em;
+    text-align: justify;
 }
 
-.container h2 {
-    text-align: center;
+/* especificação dos h2 e h3 dentro de uma coluna */
+.col h3,
+.col h2,
+.col h3{
+    word-wrap: normal;
+    text-indent: 1.5em;
 }
 
-.col-2 h2,
-.col-3 h2,
-.col-2 p,
-.col-3 p {
-    text-align: center;
-}
-
-
-/*duas colunas*/
+/* duas colunas */
 @media (min-width: 480px) {
-  /* se o tamanho da tela não tiver no mínimo 480px a classe é ignorada 1 columa é aplicada*/
+    /* A partir que a tela tem no mínimo 480px é possivel utilizar duas colunas
+    Caso a view não atenda o requisito, torna-se 1 coluna */
     .col-2 {
         width: 50%;
     }
@@ -258,32 +353,68 @@ adicionar margin ou padding)
 
 /* tres colunas */
 @media (min-width: 728px) {
-  /* se o tamanho da tela não tiver no mínimo 728px a classe é ignorada e 1 columa é aplicada*/
+    /* A partir que a tela tem no mínimo 728px é possivel utilizar três colunas
+    Caso a view não atenda o requisito, torna-se 1 coluna */
     .col-3 {
         width: 33.3333%;
     }
+}
 
-    .content {
+
+/* As especificações de elementos p, h2, h3 e img são informados fora da MediaQuery
+com o intuito de manter sua formatação de texto, mesmo sem a disposição de 3 ou 2 colunas */
+.col-3 img {
+    max-width: 100%;
+    max-height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-2 h2,
+.col-3 h2,
+.col-2 p,
+.col-3 p {
+    text-align: center;
+    text-indent: 0;
+}
+
+/*  Coluna de Content e Sidebar */
+@media (min-width: 992px) {
+     /* A partir que a tela tem no mínimo 992px é possivel utilizar as colunas de content e size
+    Caso a view não atenda o requisito, torna-se 1 coluna */
+    .col-content {
         width: 70%;
     }
-
-    .side {
+    .col-sidebar {
         width: 30%;
     }
 }
 
+
+/* o uso de col col-n com col col-content/con-sidebar não é recomendado
+Use só col col-n ou col-content/con-sidebar*/
+
 /* Linha do Tempo */
 
+/* bloco da linha do tempo */
+/* largura máxima de 1170px assim como o container
+margem lateral auto para se centralizar
+*/
 .timeline {
     position: relative;
-    max-width: 1024px;
+    max-width: 1170px;
     height: auto;
-    padding: 0px;
-    margin: 0px auto;
+    padding: 0 ;
+    margin: 0 auto;
     overflow: hidden;
     list-style: none;
 }
 
+/* fundo da linha do tempo - reta tracejada
+Com 50% de largura e 100% de altura em relação ao elemento pai, com uma borda direita cinza e tracejada.
+Posicionado como absoluto com z-index negativo para ficar ao fundo da página
+*/
 .timeline-background {
     width: 50%;
     float: left;
@@ -294,6 +425,7 @@ adicionar margin ou padding)
     box-sizing: border-box;
 }
 
+/* Marcação de um ano na linha do tempo */
 .timeline-year {
     font-weight: 600;
     font-size: 25px;
@@ -306,27 +438,58 @@ adicionar margin ou padding)
     clear: both;
 }
 
+/* Descrição de um evento na linha do tempo
+Com 44% de largura e os 6% restantes distruibudos entre o margin e padding para visualizar o timeline-background*/
 .timeline-event{
     width: 44%;
     margin: 4% 2%;
     padding: 1%;
-    float: right;
     text-align: center;
     background-color: white;
 }
 
-.timeline-img{
+/* Imagem de um evento na linha do tempo
+Com 44% de largura e os 6% restantes distruibudos entre o margin e padding para visualizar o timeline-background*/
+.timeline-img {
     width: 44%;
     margin: 4% 2%;
     padding: 1%;
-    float: left;
     background-color: white;
 }
 
+/* Alteração da posição (right e left) entre a descrição e a imagem de um evento com base nos filhos pares e
+ímpares */
+
+.timeline-event:nth-of-type( odd ){
+    float:right;
+}
+
+.timeline-event:nth-of-type( even ) {
+    float: left ;
+}
+
+.timeline-img:nth-of-type( even ) {
+    float: right;
+}
+
+.timeline-img:nth-of-type( odd ) {
+    float: left;
+}
+
+/* Caso a view tenha menos que 600px a imagem e a descrição de um evento ficam centralizados */
 @media (max-width: 600px) {
     .timeline-event,
     .timeline-img {
         width:auto;
         float:none;
     }
+}
+
+.link{
+    text-decoration: none;
+    color:black;
+}
+
+.link:hover{
+    color:#1d99f3;
 }
