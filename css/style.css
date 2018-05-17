@@ -487,9 +487,10 @@ Com 44% de largura e os 6% restantes distruibudos entre o margin e padding para 
 
 .link{
     text-decoration: none;
-    color:black;
+    color:#1d99f3;
 }
 
-.link:hover{
-    color:#1d99f3;
+.rede-social{
+    text-decoration: none;
+    color:white;
 }
