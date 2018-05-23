@@ -235,7 +235,7 @@ footer p{
 }
 
 .row {
-    padding: 1em ;
+    padding: 0 1em ;
     overflow: auto;
     clear:both;
 }
@@ -245,7 +245,7 @@ footer p{
     display: inline-block;
     vertical-align: top;
     width: 100%;
-    margin-bottom: 2em;
+    /* margin-bottom: 2em; */
     margin-right: -4px;
 }
 
@@ -283,6 +283,7 @@ footer p{
     .col-sidebar {
         width: 30%;
     }
+
 }
 
 .timeline {
@@ -363,4 +364,52 @@ footer p{
 .link-footer{
     text-decoration: none;
     color:white;
+}
+
+
+input {
+    width: 100%;
+    padding: 1em ;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 0.5em ;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+label {
+    padding: 1em 1em 1em 0 ;
+    text-align: left;
+}
+
+.form{
+    width: 50%;
+}
+
+@media (max-width: 992px) {
+    .form {
+        width: 100%;
+    }
+}
+
+.error-message{
+    background-color:#f44755;
+    color:white;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 0.8em;
+    padding: 1em;
+    text-indent: 0;
+    box-sizing: border-box;
+}
+
+.success-message {
+    background-color: #27ae60;
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 0.8em;
+    padding: 1em;
+    text-indent: 0;
+    box-sizing: border-box;
 }
