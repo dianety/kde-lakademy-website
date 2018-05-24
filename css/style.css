@@ -367,7 +367,17 @@ footer p{
 }
 
 
-input {
+.form {
+    width: 50%;
+}
+
+@media (max-width: 992px) {
+    .form {
+        width: 100%;
+    }
+}
+
+.form input {
     width: 100%;
     padding: 1em ;
     border: 2px solid #ccc;
@@ -377,19 +387,8 @@ input {
     box-sizing: border-box;
 }
 
-label {
+.form label {
     padding: 1em 1em 1em 0 ;
-    text-align: left;
-}
-
-.form{
-    width: 50%;
-}
-
-@media (max-width: 992px) {
-    .form {
-        width: 100%;
-    }
 }
 
 .error-message{
