@@ -6,12 +6,13 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
         <link rel="icon" href="img/favicon.png" type="image/x-icon" />
+        <script src="js/functions.js"></script>
     </head>
     <body>
         <header class="bg-2018">
             <nav>
                 <div class="navbar">
-                    <a class="navbar-title" href="index.html">Latin America KDE Summit </a>
+                    <a class="navbar-title" href="index.html">Latin America KDE Summit</a>
                     <a class="navbar-item"  href="contato.html">Contato</a>
                     <div class="navbar-dropdown">
                         <a class="navbar-dropdown-title">
@@ -19,6 +20,7 @@
                             <i class="fa fa-caret-down"></i>
                         </a>
                         <div class="navbar-dropdown-content">
+                            <a class="navbar-dropdown-item" href="2018.html">2018</a>
                             <a class="navbar-dropdown-item" href="2017.html">2017</a>
                             <a class="navbar-dropdown-item" href="2016.html">2016</a>
                             <a class="navbar-dropdown-item" href="2015.html">2015</a>
@@ -27,6 +29,7 @@
                         </div>
                     </div>
                     <a class="navbar-item" href="sobre.html">Sobre</a>
+                    <a class="navbar-item" href="index.html">Home</a>
                 </div>
                 <div class="navbar-collapse">
                     <div class="navbar-header-collapse">
@@ -35,10 +38,12 @@
                         <i class="fas fa-bars"></i>
                     </a>
                     </div>
+                    <a class="navbar-item-collapse hide" href="index.html">Home</a>
                     <a class="navbar-item-collapse hide" href="sobre.html">Sobre</a>
                     <a class="navbar-item-collapse hide" href="javascript:dropdownShow();">Edições
                         <i class="fa fa-caret-down"></i>
                     </a>
+                    <a class="navbar-collapse-dropdown-item hide" href="2018.html">2018</a>
                     <a class="navbar-collapse-dropdown-item hide" href="2017.html">2017</a>
                     <a class="navbar-collapse-dropdown-item hide" href="2016.html">2016</a>
                     <a class="navbar-collapse-dropdown-item hide" href="2015.html">2015</a>
@@ -48,14 +53,14 @@
                 </div>
             </nav>
             <img id="logo" src="img/kde-logo.png" alt="logo">
-            <h1> Latin America KDE Summit | Lakademy 2018 </h1>
+            <h1> Latin America KDE Summit</h1>
             <div class="button">
-                <a class="button-primary"> Inscreva-se! </a>
+                <a href="inscreva-se.html" class="button-primary"> Inscreva-se! </a>
             </div>
         </header>
 
         <main>
-            <section id="sobre">
+            <section>
                 <div class="container">
                     <div class="row">
                         <div class="col col-3">
@@ -65,7 +70,7 @@
                                 O LaKademy é o encontro dos usuários e colaboradores latino-americanos da comunidade KDE.
                             </p>
                             <div class="button">
-                                <a class="button button-secondary"> Saiba mais!</a>
+                                <a href="sobre.html" class="button button-secondary"> Saiba mais!</a>
                             </div>
                         </div>
                         <div class="col col-3">
@@ -75,7 +80,7 @@
                                 Se você deseja se tornar um(a) contribuidor(a) da nossa comunidade há muitas atividades com as quais você pode se envolver.
                             </p>
                             <div class="button">
-                                <a class="button-secondary"> Saiba mais!</a>
+                                <a href="https://www.kde.org/get-involved" target="_blank" class="button-secondary"> Saiba mais!</a>
                             </div>
                         </div>
                         <div class="col col-3">
@@ -83,14 +88,14 @@
                             <img src="img/contato.png">
                             <p>Se você tem interesse em participar do LaKademy e contribuir com a comunidade KDE, entre em contato conosco.</p>
                             <div class="button">
-                                <a class="button-secondary"> Saiba mais!</a>
+                                <a href="contato.html" class="button-secondary"> Saiba mais!</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="edicoes">
+            <section>
                 <ul class="timeline">
                     <div class="timeline-background"></div>
                     <li class="timeline-year">
@@ -98,10 +103,12 @@
                             2017
                         </p>
                     </li>
-                    <li class="timeline-img" href="#">
-                        <img class="img-responsive" src="img/logo-2017.png">
+                    <li class="timeline-img">
+                        <a href="2017.html">
+                            <img class="img-responsive" src="img/logo-2017.png">
+                        </a>
                     </li>
-                    <li class="timeline-event" href="#">
+                    <li class="timeline-event">
                         <p>
                             O LaKademy 2017 foi uma edição muito especial, o evento completou 5 anos. A 5ª edição foi realizado na cidade de Belo Horizonte, Minas Gerais, Brasil. 
                         </p>
@@ -112,10 +119,12 @@
                             2016
                         </p>
                     </li>
-                    <li class="timeline-img" href="#">
-                        <img class="img-responsive" src="img/logo-2016.png">
+                    <li class="timeline-img">
+                        <a href="2016.html">
+                            <img class="img-responsive" src="img/logo-2016.png">
+                        </a>
                     </li>
-                    <li class="timeline-event" href="#">
+                    <li class="timeline-event">
                         <p>
                             Em 2016, a comunidade KDE completou seus 20 anos de existência, o LaKademy aconteceu no Rio de Janeiro, nas dependências da UNIRIO (Universidade Federal do Estado do Rio de Janeiro).
                         </p>
@@ -126,10 +135,12 @@
                             2015
                         </p>
                     </li>
-                    <li class="timeline-img" href="#">
-                        <img class="img-responsive" src="img/logo-2015.png">
+                    <li class="timeline-img">
+                        <a href="2015.html">
+                            <img class="img-responsive" src="img/logo-2015.png">
+                        </a>
                     </li>
-                    <li class="timeline-event" href="#">
+                    <li class="timeline-event">
                         <p>
                             Em 2015 o LaKademy aconteceu em Salvador, Bahia, casa do Akademy-BR, do primeiro grupo brasileiro de desenvolvedores do KDE, chamado Live Blue, e terra dos Orixás! 
                         </p>
@@ -140,10 +151,12 @@
                             2014
                         </p>
                     </li>
-                    <li class="timeline-img" href="#">
-                        <img class="img-responsive" src="img/logo-2014.png">
+                    <li class="timeline-img">
+                        <a href="2014.html">
+                            <img class="img-responsive" src="img/logo-2014.png">
+                        </a>
                     </li>
-                    <li class="timeline-event" href="#">
+                    <li class="timeline-event">
                         <p>
                             A segunda edição do LaKademy ocorreu na cidade de São Paulo, entre os dias 27 e 30 de Agosto de 2014. O evento foi realizado
                             no CCSL - Centro de Competência em Software Livre do Instituto de Matemática (IME) e Estatística da Universidade de São
@@ -156,10 +169,12 @@
                             2012
                         </p>
                     </li>
-                    <li class="timeline-img" href="#">
-                        <img class="img-responsive" src="img/logo-2012.jpg">
+                    <li class="timeline-img">
+                        <a href="2012.html">
+                            <img class="img-responsive" src="img/logo-2012.jpg">
+                        </a>
                     </li>
-                    <li class="timeline-event" href="#">
+                    <li class="timeline-event">
                         <p>
                         A primeira edição do LaKademy aconteceu entre 27 de abril e 01 de maio de 2012. O evento foi realizado na cidade de Porto
                         Alegre, no Rio Grande do Sul, Brasil. Participaram dessa edição colaboradores do Brasil, Argentina, Peru e Colômbia. Doze
@@ -172,7 +187,7 @@
 
 
 
-            <section id="depoimentos">
+            <section>
                 <div class="container">
                     <h2> Depoimentos </h2>
                     <div class="row">
@@ -204,28 +219,35 @@
                 <div class="row">
                     <div class="col col-content">
                         <p>
-                            Mantido por KDE Brasil
+                            Mantido por
+                            <a target="_blank" href="http://br.kde.org/" class="link-footer"> KDE Brasil </a>
                         </p>
                         <p>
-                            KDE® e logo do KDE são marcas registradas de KDE e.V.
+                            KDE® e logo do KDE são marcas registradas de
+                            <a target="_blank" href="https://ev.kde.org/" class="link-footer">
+                            KDE e.V. </a>
                         </p>
                     </div>
                     <div class="col col-sidebar">
                         <p>
-                            <i class="icon social-media fab fa-facebook"></i>/lakademy
+                            <a target="_blank" class="link-footer" href="https://www.facebook.com/kdebrasil/">
+                                <i class="icon social-media fab fa-facebook"></i> Facebook
+                            </a>
                         </p>
                         <p>
-                            <i class="icon social-media fab fa-twitter"></i>/lakademy
+                            <a target="_blank" class="link-footer" href="https://twitter.com/kdebrasil">
+                                <i class="icon social-media fab fa-twitter"></i> Twitter
+                            </a>
                         </p>
                         <p>
-                            <i class="icon social-media fab fa-telegram"></i>/lakademy
+                            <a target="_blank" class="link-footer" href="https://telegram.me/joinchat/BstFRj9eUM4B7fZE3yEnLQ">
+                                <i class=" icon social-media fab fa-telegram"></i> Telegram
+                            </a>
                         </p>
                     </div>
                 </div>
             </div>
         </footer>
-
-        <script src="js/functions.js"></script>
 
     </body>
 </html>
