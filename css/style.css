@@ -259,6 +259,7 @@ footer p{
     width: 100%;
     /* margin-bottom: 2em; */
     margin-right: -4px;
+    padding: 0 1em;
 }
 
 .col p {
@@ -393,9 +394,10 @@ footer p{
     padding: 1em ;
     border: 2px solid #ccc;
     border-radius: 10px;
-    margin-bottom: 0.5em ;
+    margin-bottom: 1em ;
     outline: 0;
     box-sizing: border-box;
+
 }
 
 .form label {
